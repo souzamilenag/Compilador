@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VM Assembly</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="Principal.js"></script>
+
+</head>
+
+<body>
+  <!-- Área do código -->
+  <div class="code-window">
+  </div>
+
+  <!-- Área de entrada/saída -->
+  <div class="io-window">
+    <div class="output-container">
+      <div class="output-container-div">
+        <span class="output-label"><br></span>
+      </div>
+      <div>
+        <textarea name="output" id="output" disabled="true" class="output-window" style="height: 70px; width: 1000px;"></textarea>
+      </div>
+    </div>
+
+  </div>
+
+  
+    <!-- Área do depurador e pilha -->
+  <div class="debugger-window">
+    <textarea name="stack" id="stack" disabled="true" class="stack"></textarea>
+
+    <div><button onclick="openFile()">Abrir Arquivo</button></div>
+    
+    <div class="execution-mode">
+      <label>
+        <input type="button" name="execution" value="Executar" onclick="rodarCodigo()">
+      </label>
+    </div>
+
+    <!-- Botão de Reset -->
+    <div class="reset-button">
+      <button class="debugger-button" id="reset" onclick="reset()">
+        Reset
+      </button>
+    </div>
+  </div>
+</body>
+
+</html>
